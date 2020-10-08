@@ -1,6 +1,9 @@
 {%extends "base.html" %}
 {% block title %}this is a title zz{% endblock %}
 {% block body %}
+    {{super()}}
+
+    <a href="{{ url_for('index',name='nghia',age=20) }}">Quay ve trang chu</a>
 
     {% import 'macros.html' as macros %}
 

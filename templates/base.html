@@ -7,9 +7,16 @@
         {% block title %}
         {% endblock %}
     </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
+    {% for message in get_flashed_messages() %}
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{message}}
+    {% endfor %}
+
     {% block body %}
+    day la ndung trong base.html <br/>
     {% endblock %}
 </body>
 </html>

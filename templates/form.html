@@ -1,0 +1,20 @@
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends "base.html" %}
+
+{% block title %}
+    A form
+{% endblock %}
+
+{% block body %}
+
+<h1>hello {% if name %}{{ name }}{% else %}Stranger{% endif %}</h1>
+    
+    {{wtf.quick_form(form)}}
+
+    
+<!--     
+    {{form.name.label}}
+    {{form.name(class="nghiahsgs")}}
+    {{form.submit()}} -->
+
+{% endblock %}

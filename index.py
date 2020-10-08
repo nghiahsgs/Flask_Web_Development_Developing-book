@@ -4,7 +4,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     user_agent = request.headers.get('User-Agent')
-    # print(app.url_map)
+    print(app.url_map)
     return 'Your user agent: %s'%user_agent,400
     
 # @app.route('/user/<int:name>')
