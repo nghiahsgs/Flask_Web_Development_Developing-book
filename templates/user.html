@@ -1,0 +1,26 @@
+{%extends "base.html" %}
+{% block title %}this is a title zz{% endblock %}
+{% block body %}
+
+    {% import 'macros.html' as macros %}
+
+    <div>Hello from templates , {{name}}!<div>
+
+    <div>list of Filters in Jinja2<div>
+    <!-- 
+
+    <div>Hello from templates , {{name|safe}}!</div>
+    <div>Hello from templates , {{name|capitalize}}!</div>
+    <div>Hello from templates , {{name|lower}}!</div>
+    <div>Hello from templates , {{name|upper}}!</div>
+    <div>Hello from templates , {{name|title}}!</div>
+    <div>Hello from templates , {{name|trim}}!</div>
+    <div>Hello from templates , {{name|length}}!</div> -->
+
+    <ul>
+        {% for user in list_users %}
+            {{macros.render_user(user)}}
+        {% endfor %}
+    </ul>
+
+{% endblock %}
