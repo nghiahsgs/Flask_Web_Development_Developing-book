@@ -6,6 +6,7 @@ password_hash = generate_password_hash(password, method='pbkdf2:sha1', salt_leng
 
 # B1: generate_password_hash
 '''
+salt la random
 password => add salt (3 chars) to before password => md5() => pass_hash => save db
 username|salt|pass_hash
 '''
